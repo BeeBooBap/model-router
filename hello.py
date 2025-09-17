@@ -1,5 +1,6 @@
 # hello.py
 from keywords import LEGAL_KEYWORDS, CODING_KEYWORDS
+from logger import log_query
 
 # basic classifier
 def classify_query(text):
@@ -14,13 +15,18 @@ def classify_query(text):
     print(f"Legal matches: {legal_matches}")
     print(f"Coding matches: {coding_matches}")
 
-    # return output based on keyword match
+    # generate result based on keyword match
     if legal_matches > coding_matches:
-        return "This looks like a legal question."
+        result = "This looks like a legal question."
     elif coding_matches > legal_matches:
-        return "This looks like a coding question."
+        result = "This looks like a coding question."
     else:
-        return "I'm not sure what type of question this is."
+        result = "I'm not sure what type of question this is."
+    
+    # log this query
+    log_query(text, result, legal_matches, coding_matches)
+
+    return result
 
 # test
 question = input("Ask me a question: ")
