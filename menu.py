@@ -42,9 +42,10 @@ def main_menu():
         print ("2. View recent queries")
         print ("3. Report wrong classification")
         print("4. View corrections")
-        print("5. Quit")
+        print("5. Show statistics")
+        print("6. Quit")
 
-        choice = input("\nChoose an option (1-5): ")
+        choice = input("\nChoose an option (1-6): ")
 
         if choice == "1":
             question = input("\nAsk me a question: ")
@@ -62,13 +63,18 @@ def main_menu():
         elif choice == "4":
             from improver import view_corrections
             view_corrections()
-        
+
         elif choice == "5":
+            from stats import analyse_performance, show_keyword_coverage
+            analyse_performance()
+            show_keyword_coverage()
+        
+        elif choice == "6":
             print("Goodbye!")
             break
         
         else:
-            print("Please enter 1-5")
+            print("Please enter 1-6")
 
 if __name__ == "__main__":
     main_menu()
