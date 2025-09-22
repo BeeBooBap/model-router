@@ -4,3 +4,9 @@ SUGGESTED KEYWORD: Injury for LEGAL
 CORRECTION: 'What is Java?' should be CODING
 SUGGESTED KEYWORD: Java for CODING
 ---
+CORRECTION: 'What is coding?' should be CODING
+SUGGESTED KEYWORD: coding for CODING
+---
+CORRECTION: 'Can I sue you?' should be LEGAL
+SUGGESTED KEYWORD: sue for LEGAL
+---
