@@ -40,9 +40,11 @@ def main_menu():
         print("\n=== Query Classifier ===")
         print("1. Ask a question")
         print ("2. View recent queries")
-        print ("3. Quit")
+        print ("3. Report wrong classification")
+        print("4. View corrections")
+        print("5. Quit")
 
-        choice = input("\nChoose an option (1-3): ")
+        choice = input("\nChoose an option (1-5): ")
 
         if choice == "1":
             question = input("\nAsk me a question: ")
@@ -52,13 +54,21 @@ def main_menu():
         
         elif choice == "2":
             view_log()
-        
+
         elif choice == "3":
+            from improver import manual_correction
+            manual_correction()
+        
+        elif choice == "4":
+            from improver import view_corrections
+            view_corrections()
+        
+        elif choice == "5":
             print("Goodbye!")
             break
         
         else:
-            print("Please enter 1, 2, or 3")
+            print("Please enter 1-5")
 
 if __name__ == "__main__":
     main_menu()

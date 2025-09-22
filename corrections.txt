@@ -1,0 +1,6 @@
+CORRECTION: 'Tell me about personal injury?' should be LEGAL
+SUGGESTED KEYWORD: Injury for LEGAL
+---
+CORRECTION: 'What is Java?' should be CODING
+SUGGESTED KEYWORD: Java for CODING
+---
