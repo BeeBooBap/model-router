@@ -1,7 +1,7 @@
-# model-router
+# Model-router
 To route models.
 
-# File Structure:
+# File Structure
 
 hello.py - Simple test/learning script
 menu.py - Main application with interactive interface
